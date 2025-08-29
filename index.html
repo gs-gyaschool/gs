@@ -9,8 +9,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      overflow: hidden;
+      min-height: 100vh; /* Make body at least full viewport height */
+      overflow: hidden; /* Hide scrollbars if image overflows */
+      background-color: #000; /* Optional: Set background color for empty space */
+    }
+    img {
+      max-width: 100%; /* Ensure image doesn't exceed viewport width */
+      max-height: 100vh; /* Ensure image doesn't exceed viewport height */
+      object-fit: contain; /* Scale image to fit, maintaining aspect ratio */
+      width: 100%; /* Important for centering and full sizing */
+      height: 100%; /* Important for centering and full sizing */
     }
   </style>
 </head>
